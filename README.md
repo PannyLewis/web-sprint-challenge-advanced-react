@@ -39,6 +39,9 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
    render() {
    return <div>Hello, I am Foo Component</div>;
    }
+
+==============
+
 2. Describe the different phases of the component lifecycle.
    There are 3 lifecycles:
 
@@ -46,11 +49,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 2) Growth/Updating Phase: here is when you setState to change the component’s state data. That one calls api versus shouldComponentUpdate which stops the api call.
 3) Death/Un-mounting Phase: this is when components are removed. You can use componentWillUnmount to clean up.
 
+==============
+
 3. Demonstrate an understanding of class component lifecycle methods.
+   1)constructor: create components with state.
+   2)render: return something to the DOM.
+   3)componentDidMount: call setState.
+   4)componentDidUpdate: uses 2 arguments, prevProps and prevState, used to manage how data is updated.
+   5)componentWillUnmount: used to stop an api call; removes DOM elements created by CDM, stops timers, remove methods, etc.
+
+==============
 
 4. Define stateful logic.
+   Class components that use state to initialize data and pass down props. When this state is used with multiple functions and components such as submit, clear, checkout, forms, etc, it follows some logic path hence the term stateful logic.
+
+==============
 
 5. Describe how to test a React component with React Testing Library.
+   1. Two tools are needed: Jest (included with CRA) and React Testing Library.
+   2. in the terminal, use npm test and a to run test
+   3. The test function syntax is:
+      test("descripton", () => { }.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
