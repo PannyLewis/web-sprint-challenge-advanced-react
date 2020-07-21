@@ -19,8 +19,8 @@ const CheckoutForm = (props) => {
     console.log("You called a callback!");
   };
 
-  // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [values, handleChanges, handleSubmit, showSuccessMessage] = useForm(
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [values, handleChanges] = useForm(
     "CheckoutForm",
     initialValue,
     formCallback
@@ -30,10 +30,10 @@ const CheckoutForm = (props) => {
   //   setValues({ ...values, [e.target.name]: e.target.value });
   // };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setShowSuccessMessage(true);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowSuccessMessage(true);
+  };
 
   return (
     <>

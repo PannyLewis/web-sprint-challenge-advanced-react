@@ -1,8 +1,9 @@
 // write your custom hook here to control your checkout form
 import { useLocalStorage } from "../hooks/useLocalStorage";
+// import { useEffect } from "react";
 
-export const useForm = (key, initialValues) => {
-  const [values, setValues] = useLocalStorage([key], initialValues);
+export const useForm = (key, value) => {
+  const [values, setValues] = useLocalStorage(key, value);
 
   const handleChanges = (e) => {
     // console.log(e.target.value);
@@ -17,15 +18,20 @@ export const useForm = (key, initialValues) => {
   //   setUsername(e.target.value);
   // };
 
-  const handleSubmit = (e) => {
-    // e.preventDefault();
-    if (e) e.preventDefault();
-    // setShowSuccessMessage(true);
-  };
+  // const handleSubmit = (e) => {
+  // e.preventDefault();
+  // if (e) e.preventDefault();
+  // setShowSuccessMessage(true);
+  // };
   // const handleSubmit = e => {
   //   e.preventDefault();
   //   alert(username);
   // };
 
-  return [values, handleSubmit, handleChanges];
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setShowSuccessMessage(true);
+  // };
+
+  return [values, handleChanges];
 };
