@@ -29,7 +29,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
-
+   a) Declare your class component by extending the React.Component parent class: class App extends React.Component {}
+   b) Use the constructor function to set up some state:
+   constructor() {
+   super();
+   this.state = {};
+   }
+   c) Use the render method to display on the DOM:
+   render() {
+   return <div>Hello, I am Foo Component</div>;
+   }
 2. Describe the different phases of the component lifecycle.
 
 3. Demonstrate an understanding of class component lifecycle methods.
