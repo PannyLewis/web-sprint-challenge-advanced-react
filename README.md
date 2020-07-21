@@ -40,6 +40,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
    return <div>Hello, I am Foo Component</div>;
    }
 2. Describe the different phases of the component lifecycle.
+   There are 3 lifecycles:
+
+1) The Birth/Mounting Phase: this is when you set up the barebone skeleton of our app. You can render to see if it displays to the DOM and you can make api calls using the componentDidMount.
+2) Growth/Updating Phase: here is when you setState to change the component’s state data. That one calls api versus shouldComponentUpdate which stops the api call.
+3) Death/Un-mounting Phase: this is when components are removed. You can use componentWillUnmount to clean up.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
